@@ -1,0 +1,4 @@
+RewriteEngine On
+RewriteBase /CSBE/QueueApp/
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteRule ^ index.php [QSA,L]

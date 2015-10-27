@@ -1,0 +1,53 @@
+
+
+<form action="{{ baseUrl() }}/addPerson" method="post">
+<table>
+    <tr>
+        <td>Name: </td>
+        <td><input type="text" size="20" name="firstname" /></td>
+    </tr>
+    <tr>
+        <td>Surname: </td>
+        <td><input type="text" size="20" name="lastname" /></td>
+    </tr>
+    <tr>
+        <td>Age: </td>
+        <td><input type="text" size="20" name="birthdate" /></td>
+    </tr>
+</table>
+    <button type="submit" value=".add">.add</button>
+</form>
+
+
+<!-- -------------------------------------------------------------------------------- -->
+
+<form action="{{ baseUrl() }}/callPerson" method="post">
+
+    <p>Anzahl Personen in der Warteschlange: {{ queueCount }} </p>
+    {% if queueCount > 0 %}
+        <ul>
+        {% for person in persons %}
+            <li>person.name | person.surname | person.birthdate</li>
+        {% endfor %}
+        </ul>
+        <hr />
+    <button type="submit">.call</button>
+    {% endif %}
+
+</form>
+
+{% if nextPerson %}
+    <p>Nächste Person:  person.name | person.surname | person.birthdate </p>
+{% endif %}
+
+<!-- -------------------------------------------------------------------------------- -->
+
+
+
+
+
+
+
+
+
+
