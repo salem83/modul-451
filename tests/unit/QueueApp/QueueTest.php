@@ -17,20 +17,24 @@ class QueueApp_Queue extends PHPUnit_Framework_TestCase
     public function testAddPerson() {
 
         $queue = new \RMB\Classes\Queue();
-/*
+
         $mock = $this->getMockBuilder( '\RMB\Classes\Person' )
             ->setMethods( array( '__construct' ) )
             ->setConstructorArgs( array( 'Robin', 'Bachmann', '1983-03-30' ) )
             ->getMock();
 
+        /*
         $mock->expects($this->once())
             ->method('__construct')
             ->will( $this->returnValue( array( 'firstname' => 'Robin', 'lastname' => 'Bachmann', 'birthdate' => '1983-03-30') ) );
+        */
 
         $this->assertEquals( 1, $queue->addPerson( $mock ) );
-*/
-        $person = new \RMB\Classes\Person('Biland', 'Eyuieux', '1953-07-13');
-        $this->assertEquals( 1, $queue->addPerson( $person ) );
+
+//        $person = new \RMB\Classes\Person('Biland', 'Eyuieux', '1953-07-13');
+
+
+      //  $this->assertEquals( 1, $queue->addPerson( $person ) );
 
     }
 
