@@ -14,27 +14,25 @@ class QueueApp_Queue extends PHPUnit_Framework_TestCase
         $this->assertEquals( 0, $queue->getLenght(), 'ERROR: Queue object not created' );
     }
 
-    public function testAddPerson() {
+    public function testAddRemovePerson() {
 
         $queue = new \RMB\Classes\Queue();
 
-        $mock = $this->getMockBuilder( '\RMB\Classes\Person' )
+        $person1 = $this->getMockBuilder( '\RMB\Classes\Person' )
             ->setMethods( array( '__construct' ) )
             ->setConstructorArgs( array( 'Robin', 'Bachmann', '1983-03-30' ) )
             ->getMock();
 
-        /*
-        $mock->expects($this->once())
-            ->method('__construct')
-            ->will( $this->returnValue( array( 'firstname' => 'Robin', 'lastname' => 'Bachmann', 'birthdate' => '1983-03-30') ) );
-        */
+        $this->assertEquals( 1, $queue->addPerson( $person1 ), '' );
 
-        $this->assertEquals( 1, $queue->addPerson( $mock ) );
+        $person2 = $this->getMockBuilder( '\RMB\Classes\Person' )
+            ->setMethods( array( '__construct' ) )
+            ->setConstructorArgs( array( 'Robin', 'Bachmann', '1983-03-30' ) )
+            ->getMock();
 
-//        $person = new \RMB\Classes\Person('Biland', 'Eyuieux', '1953-07-13');
+        $this->assertEquals( 2, $queue->addPerson( $person2 ) );
 
 
-      //  $this->assertEquals( 1, $queue->addPerson( $person ) );
 
     }
 
