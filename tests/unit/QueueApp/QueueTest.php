@@ -50,7 +50,7 @@ class QueueApp_Queue extends PHPUnit_Framework_TestCase
 
 
 
-        $this->assertEquals( 3, $queue->removePerson( $person2 ) );
+        $this->assertEquals( 2, $queue->removePerson( $person2 ) );
 
     }
 

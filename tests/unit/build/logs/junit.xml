@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites>
+  <testsuite name="QueueApp - phpunit test" tests="10" assertions="20" failures="1" errors="0" time="0.004628">
+    <testsuite name="QueueApp_Person" file="D:\HTDOCS\CSBE\QueueApp\tests\unit\QueueApp\PersonTest.php" tests="6" assertions="15" failures="0" errors="0" time="0.002138">
+      <testcase name="testSetBirthDate" class="QueueApp_Person" file="D:\HTDOCS\CSBE\QueueApp\tests\unit\QueueApp\PersonTest.php" line="11" assertions="6" time="0.000730"/>
+      <testcase name="testGetBirthDate" class="QueueApp_Person" file="D:\HTDOCS\CSBE\QueueApp\tests\unit\QueueApp\PersonTest.php" line="30" assertions="1" time="0.000287"/>
+      <testcase name="testSetFirstName" class="QueueApp_Person" file="D:\HTDOCS\CSBE\QueueApp\tests\unit\QueueApp\PersonTest.php" line="37" assertions="3" time="0.000360"/>
+      <testcase name="testGetFirstName" class="QueueApp_Person" file="D:\HTDOCS\CSBE\QueueApp\tests\unit\QueueApp\PersonTest.php" line="48" assertions="1" time="0.000254"/>
+      <testcase name="testSetLastName" class="QueueApp_Person" file="D:\HTDOCS\CSBE\QueueApp\tests\unit\QueueApp\PersonTest.php" line="56" assertions="3" time="0.000256"/>
+      <testcase name="testGetLastName" class="QueueApp_Person" file="D:\HTDOCS\CSBE\QueueApp\tests\unit\QueueApp\PersonTest.php" line="68" assertions="1" time="0.000251"/>
+    </testsuite>
+    <testsuite name="QueueApp_Queue" file="D:\HTDOCS\CSBE\QueueApp\tests\unit\QueueApp\QueueTest.php" tests="4" assertions="5" failures="1" errors="0" time="0.002490">
+      <testcase name="testCreateQueue" class="QueueApp_Queue" file="D:\HTDOCS\CSBE\QueueApp\tests\unit\QueueApp\QueueTest.php" line="11" assertions="1" time="0.000270"/>
+      <testcase name="testAddRemovePerson" class="QueueApp_Queue" file="D:\HTDOCS\CSBE\QueueApp\tests\unit\QueueApp\QueueTest.php" line="17" assertions="2" time="0.001486"/>
+      <testcase name="testRemovePerson" class="QueueApp_Queue" file="D:\HTDOCS\CSBE\QueueApp\tests\unit\QueueApp\QueueTest.php" line="39" assertions="1" time="0.000443">
+        <failure type="PHPUnit_Framework_ExpectationFailedException">QueueApp_Queue::testRemovePerson
+Failed asserting that 3 matches expected 2.
+
+D:\HTDOCS\CSBE\QueueApp\tests\unit\QueueApp\QueueTest.php:53
+</failure>
+      </testcase>
+      <testcase name="testGetNextPerson" class="QueueApp_Queue" file="D:\HTDOCS\CSBE\QueueApp\tests\unit\QueueApp\QueueTest.php" line="57" assertions="1" time="0.000291"/>
+    </testsuite>
+  </testsuite>
+</testsuites>

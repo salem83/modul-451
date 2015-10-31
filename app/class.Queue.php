@@ -1,13 +1,10 @@
 <?php
-
 namespace RMB\Classes;
 
 
 class Queue {
 
-
     private $queue = array();
-
 
     public function __construct( $queue = null ) {
         if( isset( $queue ) ) {
@@ -16,7 +13,7 @@ class Queue {
     }
 
 	public function addPerson( $person ) {
-        return array_push( $this->queue, $person ) ;
+        return array_push( $this->queue, $person );
     }
 
 	public function removePerson( $person ) {
